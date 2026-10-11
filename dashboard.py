@@ -1,8 +1,10 @@
 
 import streamlit as st
 import pandas as pd
-from kafka import KafkaConsumer
-
+try:
+    from kafka import KafkaConsumer
+except ImportError:
+    KafkaConsumer = None
 # ------------------------------------
 # 1. Page Configuration
 # ------------------------------------
